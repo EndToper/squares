@@ -36,7 +36,7 @@ qw = 0
 qw2 = 0
 mqw = 0
 mqw2 = 0
-for i in range(1,100):
+for i in range(1,101):
     x = 22.5+45*qw
     y = 22.5+45*qw2
     qw2 = qw2 + 1
@@ -51,14 +51,14 @@ for i in range(1,100):
         mqw = qw + 1
     mqw2 = qw2
     if mqw2 == 0:
-        mqw2 = 3
+        mqw2 = 10
     poses.append((mqw,mqw2))
 print(poses)
 while run:
     for i in pygame.event.get():
         if i.type == pygame.QUIT:
             run = False
-        if i.type == pygame.KEYDOWN and game_run == True:
+        if i.type == pygame.KEYDOWN:
             if i.key == pygame.K_ESCAPE:
                 run = False
         elif i.type == pygame.MOUSEBUTTONDOWN:
