@@ -19,7 +19,7 @@ clock = pygame.time.Clock()
 class sq(pygame.sprite.Sprite):
     def __init__(self,x,y,color):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.Surface((140, 140))
+        self.image = pygame.Surface((40, 40))
         self.rect = self.image.get_rect()
         self.rect.center = (x,y)
         self.color = color
@@ -36,11 +36,11 @@ qw = 0
 qw2 = 0
 mqw = 0
 mqw2 = 0
-for i in range(1,10):
-    x = 75+150*qw
-    y = 75+150*qw2
+for i in range(1,100):
+    x = 22.5+45*qw
+    y = 22.5+45*qw2
     qw2 = qw2 + 1
-    if i % 3 == 0 and i != 0:
+    if i % 10 == 0 and i != 0:
         qw2 = 0
         qw = qw + 1
     color = (random.randint(0,255),random.randint(0,255),random.randint(0,255))
